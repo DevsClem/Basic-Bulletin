@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+<h1>Bulletin</h1>
+<fieldset class="form">
+    <legend>Form</legend>
+    <form action="/posts" method="post">
+        <% unless flash[:errors].nil?   %>
+        <div class="errors">
+            <% flash[:errors].each do |error| %>
+            <p><%= error %></p>
+            <% end %>
+        </div>
+        <% end %> 
+        <% unless flash[:success].nil?   %>
+        <div class="success">
+            <p><%= flash[:success] %></p>
+        </div>
+        <% end %> 
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="author" value="Michael Choi">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="post[title]">
+        <label for="body">Body:</label>
+        <textarea id="body" name="post[body]"></textarea>
+        <input type="submit" value="Post">
+    </form>
+</fieldset>
+<fieldset class="board">
+    <legend>Board</legend>
+    <ul>
+        <% @posts.each do |post| %>
+        <li><a href="/bulletin/<%= post.id %>">"<%= post.title %>"</a></li>
+        <% end %>
+    </ul>
+</fieldset>

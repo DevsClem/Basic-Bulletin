@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+<section class="main_info">
+    <%= image_tag(@user.profile_picture) %>
+    <ul class="friends_list">
+        <li id="full_name"><%= @user.full_name %></li>
+        <li id="quote"><%= @user.quote %></li>
+    </ul>
+</section>
+<section class="about">
+    <h2>About Me</h2>
+    <p><%= @user.about_me %></p>
+</section>
+<section class="friends_list">
+    <h3>Friends List</h3>
+    <ul class="friends_list">
+        <% @friends.each do |friend| %>
+        <li><a href="/profile/<%= friend.id %>"><%= friend.full_name %></a></li>
+        <% end %>
+    </ul>
+</section>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bulletin</title>
+        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= javascript_importmap_tags %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container">
+            <%= yield %>
+        </div>
+    </body>
+</html>

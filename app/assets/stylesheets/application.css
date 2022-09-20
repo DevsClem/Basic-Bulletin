@@ -1,0 +1,193 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    /* outline: 1px dotted red; */
+}
+
+.container{
+    margin: 0px auto;
+    width: 700px;
+}
+
+header{
+    margin: 30px 0px;
+}
+
+    header form{
+        float: right;
+    }
+
+    header form input{
+        padding: 5px 10px;
+    }
+
+    header form input[type=submit]{
+        border: 1px solid black;
+    }
+
+    header img{
+        width: 200px;
+        height: 100;
+    }
+
+section.main_info{
+    margin: 30px 0px;
+}
+
+    .main_info img{
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+    }
+    .main_info ul{
+        display: inline-block;
+        vertical-align: middle;
+        list-style-type: none;
+    }
+
+    .main_info ul li{
+        margin: 5px 0px;
+    }
+
+    .main_info ul li#full_name{
+        font-size: 2rem;
+    }
+
+    .main_info ul li#quote{
+        border: 2px solid black;
+        padding: 0px 5px 10px 5px;
+    }
+
+section.about, section.friends_list{
+    margin: 30px 0px;
+    border: 2px solid black;
+    padding: 15px 10px;
+}
+
+    .about h2{
+        margin: 0px 0px 20px 0px;
+    }
+
+    .friends_list h3{
+        margin: 0px 0px 10px 0px;
+    }
+
+    .friends_list ul {
+        list-style-type: none;
+    }
+
+    .friends_list ul li{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px 10px 0px 0px;
+    }
+
+fieldset{
+    display: inline-block;
+    vertical-align: top;
+}
+
+fieldset.form{
+    width: 50%;
+    padding: 5px;
+}
+
+    fieldset.form form label{
+        display: inline-block;
+        width: 20%;
+        margin: 10px 0px;
+    }
+
+    fieldset.form form input[type=text], fieldset.form form textarea{
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+        padding: 5px 10px;
+        margin: 10px 0px;
+    }
+
+    fieldset.form form textarea{
+        height: 80px;
+        resize: none;
+    }
+
+    fieldset.form form input[type=submit]{
+        border: 1px solid black;
+        padding: 5px 10px;
+        float:right;
+        margin: 10px 0px;
+    }
+
+fieldset.board{
+    margin: 0 2%;
+    width: 40%
+    
+}
+    fieldset.board ul{
+        list-style-type: none;
+    }
+
+    fieldset.board ul li{
+        padding: 10px 5px;
+        border-bottom: 1px solid black;
+    }
+
+
+section.show_post p{
+    margin: 15px 0px;
+}
+
+section.show_post a{
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: white;
+    color:black;
+    box-shadow: 2px 2px black;
+}
+
+div.errors{
+    color:red;
+}
+
+div.success{
+    color:green;
+}
+.search_error{
+    color: red;
+    margin: 0px 0px 0px 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

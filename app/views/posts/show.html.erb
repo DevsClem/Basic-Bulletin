@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+<section class="show_post">
+    <p>Date: <%= @post.created_at.strftime("%B %d, %Y")  %></p>
+    <p>Title: <%= @post.title  %></p>
+    <p>Author: <%= @post.full_name  %></p>
+    <p>Body:</p>
+    <p><%= @post.body %></p>
+    <a href="/bulletin">Back to Bulletin</a>
+</section>

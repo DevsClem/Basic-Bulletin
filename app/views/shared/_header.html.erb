@@ -1,0 +1,9 @@
+<header>
+    <p class="search_error"><%= flash[:search_error] %></p>
+    <a href="/bulletin"><%= image_tag("friendster.png") %></a>
+    <form action="/users/search" class="search" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="text" name="name" id="name" placeholder="Type fullname of user">
+        <input type="submit" value="Search">
+    </form>
+<header>
